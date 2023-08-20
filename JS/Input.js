@@ -1,14 +1,19 @@
-document.getElementById('coupne-input').addEventListener('keyup', function (event) {
-    const text = event.target.value;
-    const deleteButton = document.getElementById('btn-apply');
+// document.getElementById('coupne-input').addEventListener('keyup', function (event) {
+//     const text = event.target.value;
+//     const deleteButton = document.getElementById('btn-apply');
 
     document.getElementById('btn-apply').addEventListener('click', function () {
-        if (text === 'SELL200') {
-            Discount();
+        const textAll = document.getElementById('coupne-input');
+        if (textAll.value === 'SELL200') {
+            Discount();          
+           textAll.value="";
+        }
+        else{
+            alert('Invalid Coupne');
         }
     })
 
-})
+
 
 function addToName(Name) {
     const Entry = document.getElementById('entry');
@@ -42,7 +47,7 @@ function TotalPrice(price) {
     }
     const deleteButtonOne = document.getElementById('btn-apply');
 
-    if (fixedNumber > 200) {
+    if (fixedNumber >= 200) {
         deleteButtonOne.removeAttribute('disabled');
         deleteButtonOne.classList.remove('bg-[#ed79ce]');
         deleteButtonOne.classList.add('bg-[#E527B2]');
