@@ -5,7 +5,6 @@ document.getElementById('coupne-input').addEventListener('keyup', function (even
     document.getElementById('btn-apply').addEventListener('click', function () {
         if (text === 'SELL200') {
             Discount();
-            alert('Valid coupne Discount added');
         }
     })
 
@@ -122,5 +121,7 @@ document.getElementById('card-six').addEventListener('click', function () {
     const priceTotalSix = FindValue('price-six');
     TotalPrice(priceTotalSix);
     OverallPricetotal(priceTotalSix);
-
+})
+document.getElementById('goHome').addEventListener('click',function(){
+    location.reload();
 })
